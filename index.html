@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Feili</title>
+</head>
+
+<body>
+  <header id="header">
+    <div id="particles-js"></div>
+  </header>
+  <div id="content">
+    <div id="left">
+      <div class="profileImage">
+        <img src="./public/feli ahmad.jpg" alt="feili"/>
+      </div>
+      <h3 style="text-align: center;">Ahmad Feili</h3>
+
+    </div>
+    <div id="right">      
+      <div class="content-right-top">
+          <div class="content-right-darkmode">
+            <input type="checkbox" id="darkMode"/>
+            <label for="darkmode">darkmode</label>
+          </div>
+          
+          <div class="lang">
+            <input type="checkbox"/>
+            <label for="lang">en</label>
+          </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <script>
+    var darkmode = document.querySelector("#darkMode");
+    darkmode.addEventListener('change', () => {
+      var tagIdName = document.getElementById("particles-js");
+      var tagIdNameLeft = document.getElementById("left");
+      var tagIdNameRight = document.getElementById("right");
+      tagIdName.classList.toggle('dark-mode');
+      tagIdNameLeft.classList.toggle('dark-mode-left');
+      tagIdNameRight.classList.toggle('dark-mode-right');
+      console.log('y');
+    });
+
+  </script>
+</body>
+
+
+
+
+<script>
+  particlesJS.load('particles-js', 'particles.json', function () {
+    console.log('callback - particles.js config loaded');
+
+  });
+
+
+</script>
+
+</html>
