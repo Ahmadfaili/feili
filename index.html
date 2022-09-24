@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Feili</title>
 </head>
@@ -20,19 +20,49 @@
         <img src="./public/feli ahmad.jpg" alt="feili"/>
       </div>
       <h3>Ahmad Feili</h3>
-
+      <div class="communication" >
+        <ul>
+          <li>
+            <a>
+              <i class="fa-brands fa-github font-size-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa-brands fa-linkedin font-size-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa-brands fa-stack-overflow font-size-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div id="right">      
+
+    <div id="right">    
+    
       <div class="content-right-top">
           <div class="content-right-darkmode">
-            <input type="checkbox" id="darkMode"/>
-            <label for="darkmode">darkmode</label>
+            <label class="switch" for="darkMode" >
+            <input type="checkbox" id="darkMode" />
+            
+            <span class="slider"></span>
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-sharp fa-solid fa-sun"></i>
+            
+            </label>
+            
           </div>
           
           <div class="lang">
             <input type="checkbox"/>
             <label for="lang">en</label>
+            
           </div>
+          
+          
       </div>
       
     </div>
