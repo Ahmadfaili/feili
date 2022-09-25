@@ -17,10 +17,10 @@
   <div id="content">
     <div id="left">
       <div class="profileImage">
-        <img src="./public/feli ahmad.jpg" alt="feili"/>
+        <img src="./public/feli ahmad.jpg" alt="profileImage" />
       </div>
       <h3>Ahmad Feili</h3>
-      <div class="communication" >
+      <div class="communication">
         <ul>
           <li>
             <a>
@@ -41,47 +41,92 @@
       </div>
     </div>
 
-    <div id="right">    
-    
+    <div id="right">
+
       <div class="content-right-top">
-          <div class="content-right-darkmode">
-            <label class="switch" for="darkMode" >
-            <input type="checkbox" id="darkMode" />
-            
+        <div class="content-right-darkmode">
+          <label class="switch" for="darkMode">
+            <input type="checkbox" id="darkMode" checked />
+
             <span class="slider"></span>
             <i class="fa-solid fa-moon"></i>
             <i class="fa-sharp fa-solid fa-sun"></i>
-            
-            </label>
-            
-          </div>
-          
-          <div class="lang">
-            <input type="checkbox"/>
-            <label for="lang">en</label>
-            
-          </div>
-          
-          
+
+          </label>
+
+        </div>
+
+        <div class="lang">
+          <input type="checkbox" />
+          <label for="lang">en</label>
+
+        </div>
+
+
       </div>
-      
+      <div class="about">
+        <div class="title">
+          <h3 class="color-title">About Me</h3>
+
+        </div>
+        <div class="story">
+          <h3 class="color-title">Who am i?</h3>
+          <h5>I am Ahmad Fili, designer, programmer and front end developer</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, totam soluta nostrum excepturi
+            molestias eos ut at minima repellendus omnis voluptatem dolore fugit aliquam mollitia magni quis rerum
+            architecto? Facere!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus harum, animi quia, illum, distinctio
+            architecto fugiat ad a sapiente ex libero officiis. Doloremque laborum tempore porro. Aliquam inventore nam
+            culpa.
+
+
+          </p>
+
+          <div class="profile">
+
+            <ul>
+              <li><span>Name:Ahmad Feili</span></li>
+              <li><span>Age:33 yers</span></li>
+
+            </ul>
+            <ul>
+              
+              <li><span>Email:</span><span class="color-title">ahmadfaili89@gmail.com</span></li>
+              <li><span>From:Abdanan,Iran</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="interests">
+        <nav>
+          <ul>
+            <li>
+              <a>Music</a>
+            </li>
+            <li>
+              <a>Music</a>
+            </li>
+            <li>
+              <a>Music</a>
+            </li>
+            <li>
+              <a>Music</a>
+            </li>
+          </ul>
+
+          <audio controls >
+            <source src="/music/alien-music-21.mp3" type="audio/mpeg"/>
+          </audio>
+        </nav>
+
+      </div>
+
     </div>
 
   </div>
 
-  <script>
-    var darkmode = document.querySelector("#darkMode");
-    darkmode.addEventListener('change', () => {
-      var tagIdName = document.getElementById("particles-js");
-      var tagIdNameLeft = document.getElementById("left");
-      var tagIdNameRight = document.getElementById("right");
-      tagIdName.classList.toggle('dark-mode');
-      tagIdNameLeft.classList.toggle('dark-mode-left');
-      tagIdNameRight.classList.toggle('dark-mode-right');
-      console.log('y');
-    });
-
-  </script>
 </body>
 
 
