@@ -420,11 +420,52 @@ label:has(input[type="checkbox"]:checked) {
 /************** footer in css       ***********************/
 
 #footer{
-  flex: 100%;
-  background-color: #d6e6f2;
-  height: 300px; 
-  border-radius: 0 0 8px 8px;
-  align-items: center;
   display: flex;
-  justify-content: center;
+    flex: 100%;
+    background-color: #d6e6f2;
+    padding-bottom: 5%;
+    border-radius: 0 0 8px 8px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 24%;
+}
+.contact{
+  padding: 4% 0 10% 0;
+    flex: 100%;
+}
+.maseges{
+  flex: 100%;
+}
+.masege-input{
+  flex: 20%;
+    display: flex;
+    padding-bottom: 1em;
+}
+.masege-input label{
+  width: 11%;  
+  line-height: 2em;
+}
+.masege-input input{
+  width: 40%;
+    padding: 0.7%;
+    border-radius: 6px;
+    border: 0.1em solid;
+}
+.masege-input textarea{
+  max-width: 40%;
+  width: 503px;
+  padding: 0.7%;
+  border-radius: 6px;
+  height: 84px;
+  min-height: 100px;
+  min-width: 30%;
+  max-height: 200px;
+}
+.send-masseges{
+  padding: 0.7em 2em;
+  border: 0.1em solid;
+  border-radius: 6px;
+  background-color: aquamarine;
+  margin-left: 9em;
 }
