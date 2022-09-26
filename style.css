@@ -54,7 +54,7 @@ ul li {
   background-color: #d6e6f2;
   height: 100%;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 8px ;
 }
 
 #content {
@@ -64,11 +64,12 @@ ul li {
   flex-wrap: wrap;
 }
 #left {
-  height: 800px;
+  
   background-color: #d6e6f2;
   flex: 20%;
-  border-radius: 8px;
-  margin-right: 0.9%;
+  border-radius: 8px 0 0 0 ;
+  
+  padding: 2% 1%;
 
   display: flex;
   flex-direction: column;
@@ -99,6 +100,9 @@ body:has(input[type="checkbox"]:checked) #left {
 body:has(input[type="checkbox"]:checked) #right {
   background-color: #414141 !important;
 }
+body:has(input[type="checkbox"]:checked) #footer {
+  background-color: #313131 !important;
+}
 
 /*****************************************************************/
 .color-title {
@@ -112,7 +116,7 @@ body:has(input[type="checkbox"]:checked) #right {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8% 8% 8% 8%;
+  margin-bottom: 15%;
 }
 #left .profileImage img {
   width: 100%;
@@ -121,10 +125,14 @@ body:has(input[type="checkbox"]:checked) #right {
   box-shadow: 1px 2px 3px #ccc;
 }
 
+#left h3{
+  color: #ff0266;
+}
 #left h3,
 .font-size-icon {
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-align: center;
+  
 }
 @media (max-width: 426px) {
   #left h3,
@@ -143,6 +151,7 @@ body:has(input[type="checkbox"]:checked) #right {
   display: flex;
   justify-content: center;
   margin-top: 4%;
+  margin-bottom: 20%;
 }
 #left .communication ul {
   display: flex;
@@ -152,6 +161,42 @@ body:has(input[type="checkbox"]:checked) #right {
 #left .communication ul li {
   margin: 0 10% 0 10%;
 }
+
+/***************** skills in css      **************************/
+
+.skills{
+  border-top: 0.02em solid;
+  display: flex;
+  flex-direction: column;
+  padding: 12% 0;
+ 
+}
+.skills h3,.specialty h3{
+  color: #ff0266;
+  text-align: left!important;
+  
+}
+
+
+.skill-row ul li{
+  padding: 2% 0;
+  padding: 1.1% 0;
+  
+}
+.skill-row ul li span,.specialty h3,.specialty-row ul li span{
+  font-size: 1.1em;
+}
+@media (max-width: 426px) {
+  .skill-row ul li span,.specialty h3,.specialty-row ul li span{
+    font-size: 0.5em !important;
+  }
+}
+@media (max-width: 768px) {
+  .skill-row ul li span ,.specialty h3,.specialty-row ul li span{
+    font-size: 0.9em;
+  }
+}
+
 
 /********************* css content****************/
 
@@ -168,7 +213,7 @@ body:has(input[type="checkbox"]:checked) #right {
   flex: 78%;  
   background-color: #f7fbfc;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 0 8px 0 0;
 }
 .switch {
   width: 30px;
@@ -275,24 +320,24 @@ label:has(input[type="checkbox"]:checked) {
   }
 }
 
-.story p {
+.story p,.specialty-row ul li p {
   line-height: 1.8em;
   line-height: 1.8em;
   font-size: 0.8em;
   margin-bottom: 2%;
   padding-bottom: 2%;
   border-bottom: 0.02em solid #ccc;
-  color: #ccc;
+  color: #8f8e8e;
   word-spacing: .02em;
 }
 @media (max-width: 426px) {
-  .story p {
+  .story p,.specialty-row ul li p {
     font-size: 0.5em !important;
     word-spacing: .01em;
   }
 }
 @media (max-width: 768px) {
-  .story p {
+  .story p,.specialty-row ul li p {
     font-size: 0.7em;
     
   }
@@ -317,7 +362,7 @@ label:has(input[type="checkbox"]:checked) {
 .profile ul li {
   margin: 0 0 3% 0;
 }
-.profile ul li span {
+.profile ul li span,.skill-row ul li {
   font-size: 0.9em;
 }
 
@@ -328,37 +373,58 @@ label:has(input[type="checkbox"]:checked) {
 }
 
 @media (max-width: 426px) {
-  .profile ul li span {
+  .profile ul li span,.skill-row ul li {
     font-size: 0.6em !important;
   }
 }
 @media (max-width: 768px) {
-  .profile ul li span {
+  .profile ul li span,.skill-row ul li {
     font-size: 0.9em;
   }
 }
 
-.interests{
-  flex: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10% 3%;
-}
-.interests nav{
-  display: flex;
-  flex: 100%;
-}
-.interests nav ul{
-  flex: 100%;
-  justify-content: center;
-  display: flex;
-}
-.interests nav ul li {
-  padding: 1% 2%;
-  border-radius: 0.6em;
-  margin-right: 1.2%;
-  background-color: #ff0266;
-  color: #fff;
+/***************** specialty in css        ***************************/
 
+.specialty{
+  padding: 5% 4%;
+
+}
+.specialty h3{
+  margin: 2% 0;
+  
+}
+.specialty-row{
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 426px) {
+  .specialty-row {
+    flex-direction: column;
+  }
+}
+.specialty-row ul{  
+  flex: 25%;
+  margin-right: 5%;
+  margin-bottom: 3%;
+  
+}
+.specialty-icon i{
+  text-align: left;
+  margin-right: 3%;
+}
+.specialty-icon{
+  margin-bottom: 2%;
+}
+
+
+/************** footer in css       ***********************/
+
+#footer{
+  flex: 100%;
+  background-color: #d6e6f2;
+  height: 300px; 
+  border-radius: 0 0 8px 8px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
