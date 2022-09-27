@@ -1,7 +1,8 @@
 @font-face {
   font-family: "IRANSansMobile";
-  src: url("./fonts/IRANSansMobile.ttf") format("ttf");
+  src: url(".src/public/fonts/IRANSansMobile.ttf") format("ttf");
 }
+
 
 body {
   margin: 0;
@@ -54,7 +55,7 @@ ul li {
   background-color: #d6e6f2;
   height: 100%;
   width: 100%;
-  border-radius: 8px ;
+  border-radius: 8px;
 }
 
 #content {
@@ -64,11 +65,10 @@ ul li {
   flex-wrap: wrap;
 }
 #left {
-  
   background-color: #d6e6f2;
   flex: 20%;
-  border-radius: 8px 0 0 0 ;
-  
+  border-radius: 8px 0 0 0;
+
   padding: 2% 1%;
 
   display: flex;
@@ -103,7 +103,24 @@ body:has(input[type="checkbox"]:checked) #right {
 body:has(input[type="checkbox"]:checked) #footer {
   background-color: #313131 !important;
 }
-
+body:has(input[type="checkbox"]:checked) input[type="text"] {
+  background-color: #414141 !important;
+  border-color: #fff;
+  color: #fff;
+}
+body:has(input[type="checkbox"]:checked) textarea[type="text"] {
+  background-color: #414141;
+  border-color: #fff;
+  color: #fff;
+}
+body:has(input[type="checkbox"]:checked) input[type="email"] {
+  background-color: #414141 !important;
+  border-color: #fff;
+  color: #fff;
+}
+body:has(input[type="checkbox"]:checked) .send-masseges {
+  border-color: #fff;
+}
 /*****************************************************************/
 .color-title {
   color: #ff0266;
@@ -125,14 +142,13 @@ body:has(input[type="checkbox"]:checked) #footer {
   box-shadow: 1px 2px 3px #ccc;
 }
 
-#left h3{
+#left h3 {
   color: #ff0266;
 }
 #left h3,
 .font-size-icon {
   font-size: 1.4em;
   text-align: center;
-  
 }
 @media (max-width: 426px) {
   #left h3,
@@ -164,39 +180,45 @@ body:has(input[type="checkbox"]:checked) #footer {
 
 /***************** skills in css      **************************/
 
-.skills{
+.skills {
   border-top: 0.02em solid;
   display: flex;
   flex-direction: column;
   padding: 12% 0;
- 
 }
-.skills h3,.specialty h3{
+.skills h3,
+.specialty h3,
+.contact h3 {
   color: #ff0266;
-  text-align: left!important;
-  
+  text-align: left !important;
 }
 
-
-.skill-row ul li{
+.skill-row ul li {
   padding: 2% 0;
   padding: 1.1% 0;
-  
 }
-.skill-row ul li span,.specialty h3,.specialty-row ul li span{
+.skill-row ul li span,
+.specialty h3,
+.specialty-row ul li span,
+.contact h3 {
   font-size: 1.1em;
 }
 @media (max-width: 426px) {
-  .skill-row ul li span,.specialty h3,.specialty-row ul li span{
+  .skill-row ul li span,
+  .specialty h3,
+  .specialty-row ul li span,
+  .contact h3 {
     font-size: 0.5em !important;
   }
 }
 @media (max-width: 768px) {
-  .skill-row ul li span ,.specialty h3,.specialty-row ul li span{
+  .skill-row ul li span,
+  .specialty h3,
+  .specialty-row ul li span,
+  .contact h3 {
     font-size: 0.9em;
   }
 }
-
 
 /********************* css content****************/
 
@@ -210,7 +232,7 @@ body:has(input[type="checkbox"]:checked) #footer {
   margin-bottom: 8%;
 }
 #content #right {
-  flex: 78%;  
+  flex: 78%;
   background-color: #f7fbfc;
   padding: 20px;
   border-radius: 0 8px 0 0;
@@ -320,7 +342,8 @@ label:has(input[type="checkbox"]:checked) {
   }
 }
 
-.story p,.specialty-row ul li p {
+.story p,
+.specialty-row ul li p {
   line-height: 1.8em;
   line-height: 1.8em;
   font-size: 0.8em;
@@ -328,18 +351,19 @@ label:has(input[type="checkbox"]:checked) {
   padding-bottom: 2%;
   border-bottom: 0.02em solid #ccc;
   color: #8f8e8e;
-  word-spacing: .02em;
+  word-spacing: 0.02em;
 }
 @media (max-width: 426px) {
-  .story p,.specialty-row ul li p {
+  .story p,
+  .specialty-row ul li p {
     font-size: 0.5em !important;
-    word-spacing: .01em;
+    word-spacing: 0.01em;
   }
 }
 @media (max-width: 768px) {
-  .story p,.specialty-row ul li p {
+  .story p,
+  .specialty-row ul li p {
     font-size: 0.7em;
-    
   }
 }
 
@@ -347,7 +371,6 @@ label:has(input[type="checkbox"]:checked) {
   display: flex;
   flex-direction: row;
   flex: 100%;
- 
 }
 @media (max-width: 426px) {
   .profile {
@@ -362,38 +385,51 @@ label:has(input[type="checkbox"]:checked) {
 .profile ul li {
   margin: 0 0 3% 0;
 }
-.profile ul li span,.skill-row ul li {
+.profile ul li span,
+.skill-row ul li,
+.masege-input label,
+.masege-input input,
+.masege-input textarea,
+.send-masseges {
   font-size: 0.9em;
 }
 
 @media (max-width: 426px) {
-  .profile ul li{
-    margin: 0 0 0 0!important;
+  .profile ul li {
+    margin: 0 0 0 0 !important;
   }
 }
 
 @media (max-width: 426px) {
-  .profile ul li span,.skill-row ul li {
+  .profile ul li span,
+  .skill-row ul li,
+  .masege-input label,
+  .masege-input input,
+  .masege-input textarea,
+  .send-masseges {
     font-size: 0.6em !important;
   }
 }
 @media (max-width: 768px) {
-  .profile ul li span,.skill-row ul li {
-    font-size: 0.9em;
+  .profile ul li span,
+  .skill-row ul li,
+  .masege-input label,
+  .masege-input input,
+  .masege-input textarea,
+  .send-masseges {
+    font-size: 0.8em;
   }
 }
 
 /***************** specialty in css        ***************************/
 
-.specialty{
+.specialty {
   padding: 5% 4%;
-
 }
-.specialty h3{
+.specialty h3 {
   margin: 2% 0;
-  
 }
-.specialty-row{
+.specialty-row {
   display: flex;
   flex-direction: row;
 }
@@ -402,59 +438,61 @@ label:has(input[type="checkbox"]:checked) {
     flex-direction: column;
   }
 }
-.specialty-row ul{  
+.specialty-row ul {
   flex: 25%;
   margin-right: 5%;
   margin-bottom: 3%;
-  
 }
-.specialty-icon i{
+.specialty-icon i {
   text-align: left;
   margin-right: 3%;
 }
-.specialty-icon{
+.specialty-icon {
   margin-bottom: 2%;
 }
 
-
 /************** footer in css       ***********************/
 
-#footer{
+#footer {
   display: flex;
-    flex: 100%;
-    background-color: #d6e6f2;
-    padding-bottom: 5%;
-    border-radius: 0 0 8px 8px;
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 24%;
+  flex: 100%;
+  background-color: #d6e6f2;
+
+  border-radius: 0 0 8px 8px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
 }
-.contact{
-  padding: 4% 0 10% 0;
-    flex: 100%;
+.contact {
+  padding: 4% 0 5% 0;
+  flex: 75%;
+  display: block;
 }
-.maseges{
+.contact h3 {
+  margin-bottom: 2em;
+}
+.maseges {
   flex: 100%;
 }
-.masege-input{
+.masege-input {
   flex: 20%;
-    display: flex;
-    padding-bottom: 1em;
+  display: flex;
+  padding-bottom: 2%;
+  align-items: center;
 }
-.masege-input label{
-  width: 11%;  
+.masege-input label {
+  width: 11%;
   line-height: 2em;
 }
-.masege-input input{
+.masege-input input {
   width: 40%;
-    padding: 0.7%;
-    border-radius: 6px;
-    border: 0.1em solid;
+  padding: 0.7%;
+  border-radius: 6px;
+  border: 0.1em solid;
 }
-.masege-input textarea{
+.masege-input textarea {
   max-width: 40%;
-  width: 503px;
+  width: 40%;
   padding: 0.7%;
   border-radius: 6px;
   height: 84px;
@@ -462,10 +500,53 @@ label:has(input[type="checkbox"]:checked) {
   min-width: 30%;
   max-height: 200px;
 }
-.send-masseges{
-  padding: 0.7em 2em;
+.send-masseges {
+  padding: 0.2em 0.9em;
   border: 0.1em solid;
   border-radius: 6px;
   background-color: aquamarine;
-  margin-left: 9em;
+  margin-left: 20%;
+  margin-top: 2em;
+  border: 0.1em solid;
+}
+
+@media (max-width: 426px) {
+  .masege-input label {
+    width: 21% !important;
+  }
+}
+@media (max-width: 768px) {
+  .masege-input label {
+    width: 15%;
+  }
+}
+
+.signature {
+  display: flex;
+  flex: 24%;
+  position: relative;
+  margin-top: 29%;
+  margin-left: 1%;
+}
+
+@media (max-width: 426px) {
+  .signature {
+    margin-top: 73%!important;
+  }
+  .signature img{
+    width: 41%!important;
+  }
+  
+}
+@media (max-width: 768px) {
+  .signature {
+    margin-top: 42%;
+  } 
+  .signature img{
+    width: 25%!important;
+  }
+}
+.signature img {
+  width: 14%;
+  display: flex;
 }
